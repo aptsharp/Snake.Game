@@ -5,7 +5,7 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    color: rgb(9, 65, 9);
-    background-color: bisque;
+    color: white;
+    background-color: rgb(27, 4, 71);
     align-items: center;
 }
