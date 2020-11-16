@@ -55,8 +55,6 @@ function inicarJogo(){
         }
 
     }
-    
-
 
     criarBG();
     criarCobrinha();
