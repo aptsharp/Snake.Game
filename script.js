@@ -6,6 +6,10 @@ snake[0] = {
     x: 8*box,
     y: 8*box
 }
+let food ={
+    x: Math.floor(Math.random()*15+1)*box,
+    y: Math.floor(Math.random()*15+1)*box
+}
 
 let direction = 'right';
 
@@ -19,6 +23,11 @@ function criarCobrinha(){
         context.fillRect(snake[i].x, snake[i].y, box, box);
     }
 
+}
+// para criar a comidinha.
+function drawFood(){ 
+    context.fillStyle = "red";
+    context.fillRect(food.x, food.y. box, box);
 }
 
 document.addEventListener('keydown', update); // para pegar os eventos quando acontece chama a função
@@ -43,6 +52,7 @@ function inicarJogo(){
 
     criarBG();
     criarCobrinha();
+    drawFood();    
 
     //ponto de partida
 
@@ -56,7 +66,15 @@ function inicarJogo(){
     if(direction == 'up') snakeY -= box;
     if(direction == 'down') snakeY += box;
 
-    snake.pop(); // para teriar o ultimo elemento
+
+    if(snakeX != food.x || snakeY != food.y){
+        snake.pop();
+    }else
+    {
+        food.x = Math.floor(Math.random()*15+1)*box;
+        food.y = Math.floor(Math.random()*15+1)*box;
+
+    }
 
     let newHead = {
         x: snakeX,
