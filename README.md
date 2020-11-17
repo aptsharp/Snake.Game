@@ -4,6 +4,7 @@
 ## Descrição:
 
 - O projeto consiste em fazer um jogo da cobrinha(snake).
+- A regra do jogo consiste em comer os quadrados vermelhos e aumentar o tamanho da cobrinha.
 
 ## Techs:
 
