@@ -1,6 +1,6 @@
 let canvas = document.getElementById("snake");
 let context = canvas.getContext("2d"); 
-let placar = 0;
+let contador = 0;
 let box = 32;
 let snake = []; 
 snake[0] ={
@@ -22,6 +22,7 @@ function criarCobrinha (){
     for(i = 0; i < snake.length; i++){
         context.fillStyle = "green";
         context.fillRect(snake[i].x, snake[i].y, box, box);
+        contador++;
     }
 }
 
@@ -39,6 +40,8 @@ function update(event){
     if(event.keyCode == 39 && direction != 'left') direction = 'right';
     if(event.keyCode == 40 && direction != 'up') direction = 'down';
 }
+
+
 
 function iniciarJogo(){    
 
